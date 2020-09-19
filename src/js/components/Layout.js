@@ -9,7 +9,7 @@ import { fetchTweets } from "../actions/tweetsActions"
         user: store.userReducer.user,
         userFetched: store.userReducer.fetched,
         tweets: store.tweetsReducer.tweets,
-        tweetsFetched: store.tweetsReducer.fetching
+        tweetsFetching: store.tweetsReducer.fetching
     }
 })
 
@@ -23,7 +23,7 @@ export default class Layout extends React.Component {
     }
 
     render() {
-        const { users, tweets, tweetsFetching } = this.props
+        const { user,  tweets, tweetsFetching } = this.props
 
         if (tweetsFetching === true) {
             return (<div>fetching...</div>)
